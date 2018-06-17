@@ -1,0 +1,56 @@
+1. rails new danigunawan -d postgresql
+2. create repo github project name : danigunawan
+3. cd danigunawan 
+4. git init
+5. git remote add origin https://github.com/danigunawan/danigunawan.git
+6. git add .
+7. git commit -m "first commit"
+8. git push origin master
+
+
+###
+
+1. Heroku Login
+2. Create App
+
+
+
+### 
+
+JIKA ERROR
+=============
+Heroku problem : The page you were looking for doesn't exist
+
+REFF : https://stackoverflow.com/questions/7376966/heroku-problem-the-page-you-were-looking-for-doesnt-exist/26756757
+
+
+
+1. I got the same problem; however, after changing 1 line code of production.rb located in config/environments/production.rb from
+
+config.assets.compile = false
+
+to
+
+config.assets.compile = true
+
+
+CARA 2
+===========
+
+I'm using postgresql, and I also had page not showing up on heroku.
+
+This command fixed it:
+
+1. heroku run rake db:setup
+
+and then
+
+2. heroku rake db:migrate
+
+I had migrated before, but hadn't done the setup first.
+
+I also had tried setting
+
+3. config.assets.compile = true
+
+in production.rb, but that made no difference.
