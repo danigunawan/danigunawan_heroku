@@ -1,3 +1,6 @@
+REFF LAIN : https://www.codepolitan.com/membuat-proyek-pertama-heroku-58b872c6217eb
+######################################################################
+
 1. rails new danigunawan -d postgresql
 2. create repo github project name : danigunawan
 3. cd danigunawan 
@@ -8,14 +11,66 @@
 8. git push origin master
 
 
-###
+### CARA DEPLOY KONEK GITHUB KE HEROKU ###
 
 1. Heroku Login
-2. Create App
+2. Create App Project dengan nama danigunawan
+3. buka project danigunawan pilih Overview 
+- bagian  Installed add-ons : pilih heroku postgres
+- ke Settings klik view database credintials (disini seting db untuk project ada akun dan password dbnya)
+- cli ke db heroku pg:psql postgresql-pointy-37909 --app danigunawan
+4. bagian menu settings pilih add buildpack : heroku/ruby
+5. bagian menu Deploy pilih github terus search pilih project dengan nama danigunawan 
+- enable automatic deploy
+- manual deploy (jika ingin perubahan deploy manual pada situs heroku langsung pada branch klik deploy branch)
+6. buka database.yml di project danigunawan
 
 
 
-### 
+DEPLOY PERTAMA
+=============
+
+heroku login
+heroku run rake db:setup -a nama_project diheroku
+
+# misal :
+
+heroku run rake db:setup -a danigunawan
+heroku run rake db:setup --app danigunawan
+heroku rake assets:precompile
+heroku rake secret
+
+
+
+### JIKA ADA SETIAP PERUBAHAN APP
+6. cmd di terminal ke cd danigunawan
+- git status
+- git add .
+- git commit -m "deploy dari local ke git"
+- git push -u origin master
+
+DEPLOY PERUBAHAN
+==========
+
+CARA 1
+========
+7. Melalui Web Heroku
+- pilih project
+- ke menu deploy
+- klik tombol deploy branch pada bagian manual deploy 
+
+CARA 2
+===========
+8. melalui terminal
+- cd ke project danigunawan di local
+- heroku login (login dengan akun heroku email password lihat di email danigunawan.elektroug@gmail.com)
+- git pull
+
+
+## jika ingin select project melalui terminal heroku ##
+heroku login
+heroku run bash
+$ cd danigunawan
 
 JIKA ERROR
 =============
