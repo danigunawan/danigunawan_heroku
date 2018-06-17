@@ -64,6 +64,9 @@ heroku run rake db:setup -a nama_project diheroku
 # misal :
 heroku restart
 heroku rake db:migrate
+heroku run rake db:migrate RAILS_ENV=test -a danigunawan
+heroku run rake db:migrate RAILS_ENV=development -a danigunawan
+heroku run rake db:migrate RAILS_ENV=production -a danigunawan
 heroku restart
 heroku run rake db:setup -a danigunawan
 heroku run rake db:setup --app danigunawan
