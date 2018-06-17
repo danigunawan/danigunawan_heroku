@@ -76,8 +76,11 @@ heroku run rake assets:precompile -a danigunawan
 heroku rake secret
 heroku run -a danigunawan rake db:migrate:status
 
+## RUN BASH
+heroku run bash -a danigunawan
+
 ## EDIT NANO
-heroku run bash -a daniguanwan
+
 heroku run -a danigunawan nano config\database.yml
 
 # REMOVE GEMFILE LOCK
