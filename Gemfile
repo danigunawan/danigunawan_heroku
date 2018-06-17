@@ -4,7 +4,7 @@ ruby "2.3.3"
 gem 'rails', '4.2.6'
 gem 'puma', '~> 2.15'
 gem 'pg', '~> 0.21.0'
-# gem 'sqlite3'
+gem 'sqlite3'
 
 # Auth
 gem 'devise', '~> 3.5.3'
