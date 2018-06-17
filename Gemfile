@@ -3,7 +3,8 @@ ruby "2.3.3"
 
 gem 'rails', '4.2.6'
 gem 'puma', '~> 2.15'
-gem 'pg'
+gem 'pg', '~> 0.21.0'
+# gem 'sqlite3'
 
 # Auth
 gem 'devise', '~> 3.5.3'
@@ -47,8 +48,7 @@ gem 'sinatra', require: false
 gem 'slim'
 # gem 'sidetiq', '~> 0.7.0'
 
-# gem 'nokogiri', '~> 1.6'
-gem 'nokogiri', '>=1.6.8.rc3'
+gem 'nokogiri', '~> 1.6'
 
 # Caching
 gem 'dalli', '~> 2.7'
