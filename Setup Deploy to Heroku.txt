@@ -75,6 +75,7 @@ heroku rake assets:clean
 heroku run rake assets:precompile -a danigunawan
 heroku rake secret
 heroku run -a danigunawan rake db:migrate:status
+heroku run rake db:schema:load -a danigunawan
 
 ## RUN BASH
 heroku run bash -a danigunawan

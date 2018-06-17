@@ -189,31 +189,53 @@
 # gem 'pg'
 #
 
+# USING SQLITE 3
+# development:
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: 5
+#   timeout: 5000
+#   database: d8e3736dah58fn
+#   host: ec2-23-23-247-245.compute-1.amazonaws.com
+#   username: ggyzqjwdshvhvt
+#   password: 7fdd4b83f8cac82d7fa1fc0f8abd4c0ca30143303292d4603934dadeef28d95c
+
+# # Warning: The database defined as "test" will be erased and
+# # re-generated from your development database when you run "rake".
+# # Do not set this db to the same as development or production.
+# test:
+#   adapter: sqlite3
+#   database: db/test.sqlite3
+#   pool: 5
+#   timeout: 5000
+
+#   production:
+#    adapter: postgresql
+#   encoding: unicode
+#   pool: 5
+#   timeout: 5000
+#   database: d8e3736dah58fn
+#   host: ec2-23-23-247-245.compute-1.amazonaws.com
+#   username: ggyzqjwdshvhvt
+#   password: 7fdd4b83f8cac82d7fa1fc0f8abd4c0ca30143303292d4603934dadeef28d95c
+
+
 development:
-  adapter: postgresql
-  encoding: unicode
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
   timeout: 5000
-  database: d8e3736dah58fn
-  host: ec2-23-23-247-245.compute-1.amazonaws.com
-  username: ggyzqjwdshvhvt
-  password: 7fdd4b83f8cac82d7fa1fc0f8abd4c0ca30143303292d4603934dadeef28d95c
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   adapter: sqlite3
   database: db/test.sqlite3
   pool: 5
   timeout: 5000
 
-  production:
-   adapter: postgresql
-  encoding: unicode
+production:
+  adapter: sqlite3
+  database: db/production.sqlite3
   pool: 5
   timeout: 5000
-  database: d8e3736dah58fn
-  host: ec2-23-23-247-245.compute-1.amazonaws.com
-  username: ggyzqjwdshvhvt
-  password: 7fdd4b83f8cac82d7fa1fc0f8abd4c0ca30143303292d4603934dadeef28d95c
+
+  
