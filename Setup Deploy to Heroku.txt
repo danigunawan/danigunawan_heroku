@@ -76,6 +76,10 @@ heroku run rake assets:precompile -a danigunawan
 heroku rake secret
 heroku run -a danigunawan rake db:migrate:status
 
+## EDIT NANO
+heroku run bash -a daniguanwan
+heroku run -a danigunawan nano config\database.yml
+
 # REMOVE GEMFILE LOCK
  heroku run rm -R Gemfile.lock -a danigunawan
 
@@ -93,7 +97,7 @@ heroku logs -n 1500
 heroku logs -n 1500 -a danigunawan
 heroku logs -n 1500 --app danigunawan
 heroku logs -t -a danigunawan
-
+heroku logs --tail -a danigunawan
 
 # Jika tidak bekerja 
 heroku pg:reset DATABASE_URL   #Literally type in heroku pg:reset DATABASE_URL
@@ -130,6 +134,7 @@ CARA 2
 ## jika ingin select project melalui terminal heroku ##
 heroku login
 heroku run bash
+heroku run bash -a daniguanwan
 $ cd danigunawan
 
 JIKA ERROR
