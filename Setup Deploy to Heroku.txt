@@ -34,16 +34,24 @@ heroku login
 heroku run rake db:setup -a nama_project diheroku
 
 # misal :
-
+heroku restart
+heroku rake db:migrate
+heroku restart
 heroku run rake db:setup -a danigunawan
 heroku run rake db:setup --app danigunawan
 heroku rake assets:precompile
 heroku rake secret
+heroku run -a danigunawan rake db:migrate:status
 
+# Jika tidak bekerja 
+heroku pg:reset DATABASE_URL   #Literally type in heroku pg:reset DATABASE_URL
+heroku rake db:migrate
 
+### JIKA PROJECT ADA PERUBAHAN INGIN DEPLOY KE HEROKU
 
-### JIKA ADA SETIAP PERUBAHAN APP
 6. cmd di terminal ke cd danigunawan
+Kita push dulu terbaru ke github lalu nanti di heroku di pull atau bisa melalui klik deploy manual 
+
 - git status
 - git add .
 - git commit -m "deploy dari local ke git"
