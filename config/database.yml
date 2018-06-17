@@ -194,10 +194,10 @@ development:
   encoding: unicode
   pool: 5
   timeout: 5000
-  database: dfl3demas3l9kv
-  host: ec2-107-20-133-82.compute-1.amazonaws.com
-  username: levntgxqseuonu
-  password: f37690068f2fab192ef3d878774e637dfff1d8d138b63911dda79bc4fec5e568
+  database: d8e3736dah58fn
+  host: ec2-23-23-247-245.compute-1.amazonaws.com
+  username: ggyzqjwdshvhvt
+  password: 7fdd4b83f8cac82d7fa1fc0f8abd4c0ca30143303292d4603934dadeef28d95c
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -213,7 +213,7 @@ test:
   encoding: unicode
   pool: 5
   timeout: 5000
-  database: dfl3demas3l9kv
-  host: ec2-107-20-133-82.compute-1.amazonaws.com
-  username: levntgxqseuonu
-  password: f37690068f2fab192ef3d878774e637dfff1d8d138b63911dda79bc4fec5e568
+  database: d8e3736dah58fn
+  host: ec2-23-23-247-245.compute-1.amazonaws.com
+  username: ggyzqjwdshvhvt
+  password: 7fdd4b83f8cac82d7fa1fc0f8abd4c0ca30143303292d4603934dadeef28d95c
