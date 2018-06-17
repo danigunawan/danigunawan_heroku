@@ -4,7 +4,7 @@ ruby "2.3.3"
 gem 'rails', '4.2.6'
 gem 'puma', '~> 2.15'
 gem 'pg', '~> 0.21.0'
-
+# gem 'sqlite3'
 
 # Auth
 gem 'devise', '~> 3.5.3'
@@ -58,7 +58,6 @@ gem 'dalli', '~> 2.7'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4.0'
   gem 'poltergeist', '~> 1.8'
@@ -68,7 +67,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'rails_best_practices', '~> 1.15'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -82,7 +80,6 @@ group :development do
 end
 
 group :test do
-  gem 'sqlite3'
   gem 'database_cleaner', '~> 1.5.1'
   gem 'capybara', '~> 2.5.0'
   gem 'factory_girl_rails', '~> 4.5.0'
@@ -92,7 +89,6 @@ group :test do
 end
 
 group :production do
-  gem 'sqlite3'
   gem 'rails_12factor', '0.0.2'
   gem 'bonsai-elasticsearch-rails'
 end
